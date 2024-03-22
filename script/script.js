@@ -160,7 +160,7 @@ function addReport () {
         const checkboxes = document.querySelectorAll('ul input');
         const newTextEquipment = document.createElement('p');
         const newElemEquipment = document.createElement('div');
-        const dropDawnName = document.querySelector('.active_dropdawn');
+        // const dropDawnName = document.querySelector('.active_dropdawn');
         
         const countChecked = () => Object.values(checkboxes).filter(el => el.checked);
 
