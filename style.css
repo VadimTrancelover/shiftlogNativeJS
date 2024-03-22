@@ -1,0 +1,640 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow: visible;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+main {
+  display: flex;
+}
+
+.leftside-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 18%;
+  height: 100vh;
+  border-right: 1px solid rgb(196, 194, 194);
+}
+
+.leftside-menu-blockbuttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.leftside-menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 20px 20px 20px 20px;
+   cursor: pointer;
+  /* border: 1px solid grey; */
+}
+
+.active {
+  background-color: rgba(214, 213, 213, 0.862);
+}
+
+.leftside-menu-button:hover {
+  color: black;
+  background-color: rgba(243, 242, 242, 0.862);
+  transition: 0.75s;
+}
+
+.leftside-menu-button:active {
+  color: white;
+  background-color: rgb(180, 188, 185);
+}
+
+h3 {
+  text-align: center;
+}
+
+/* Меню авторизации */
+.authorisation-menu-block {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid gray;
+  padding: 20px 15px 20px 15px;
+}
+
+.authorisation-login {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.authorisation-checkbox-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+
+
+/* наполнение блоков контеном*/
+  /* Блок 1 - отчёты об ошибках и авариях оборудования  */
+
+.content-rightside_block1 {
+  display: flex;
+  position: absolute;
+  left: 18%;
+  flex-direction: column;
+  width: 82%;
+  padding: 20px 40px 20px 40px;
+}
+
+.content-rightside_block1_faults-log {
+  display: flex;
+  border-bottom: 1px solid grey;
+}
+
+.faults-log_date {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  min-width: 8%;
+  min-height: 40px;
+  height: auto;
+  padding: 10px 10px 10px 10px;
+}
+
+.faults-log_equipment {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  min-width: 15%;
+  min-height: 40px;
+  height: auto;
+  padding: 10px 10px 10px 10px;
+}
+
+.faults-log_description-fault {
+  display: flex;
+  justify-content: center;
+  contain: content;
+  width: 82%;
+  min-width: 28%;
+  min-height: 40px;
+  height: auto;
+  padding: 10px 10px 10px 10px;
+}
+
+.faults-log_trobleshooting {
+  display: flex;
+  justify-content: center;
+  overflow-x:hidden; 
+  contain: content;
+  width: 82%;
+  min-width: 30%;
+  min-height: 40px;
+  height: auto;
+  padding: 10px 10px 10px 10px;
+}
+
+.faults-log_recommendations {
+  display: flex;
+  justify-content: center;
+  contain: content;
+  width: 50%;
+  min-width: 20%;
+  min-height: 40px;
+  height: auto;
+  padding: 10px 10px 10px 10px;
+}
+
+.new-record {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-content: center;
+  padding-top: 20px;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  border: 0.5px solid gray;
+  background-color: white;
+  cursor: pointer;
+  background-image: url(./png/plus-icon.jpg);
+  background-position: center;
+  background-size: 60px;
+  z-index: 9999;
+  opacity: 0.75;  
+}
+
+.new-record:hover {
+  background-image: url(./png/inverse-plus.png);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 40px;
+  transition: 0.2s;
+  background-color: rgba(243, 242, 242, 0.862);;
+}
+
+.new-record:active {
+  background-image: url(./png/inverse-plus.png);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-color: black;
+  transition: 0.5s;
+  width: 60px;
+  height: 60px;
+}
+
+
+
+/*  Стили модального окна */
+
+#modal_window_new-record{
+  display: none; /* убрать после редактирования*/
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.header-modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title-modal {
+  position: relative;
+  left: 46%;
+}
+
+.block-sent-buttonsAndcounts {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.buttons-sent-block {
+  margin-left: 60px;
+}
+
+.counts-reports {
+  display: flex;
+}
+
+.title-reports {
+  margin-left: 6px;
+}
+
+.modal_content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 10% auto;
+    padding: 0px 0px 0px 10px;
+    border: 1px solid black;
+    width: 70%;
+    /* height: 40%; */
+}
+
+
+.close_modal {
+  background-image: url(./png/cancel.png);
+  background-color: #FFF;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.close_modal:hover {
+  background-color: rgba(243, 242, 242, 0.862);
+}
+
+.close_modal:active {
+  background-color:  rgb(180, 188, 185);
+}
+
+/* Модальное окно - выпадающее меню */
+
+.dropdown_list{
+  position: relative;
+  display: inline-block;
+  width: 70%;
+  font-size: 16px;
+  color: #FFF;
+}
+
+.inputs_windows {
+  display: flex;
+  width: 100%;
+}
+
+.forms_windows {
+  display: flex;
+  position: relative;
+  bottom: 15px;
+  justify-content: space-between;
+  width: 80%;
+
+}
+
+.modal-form {
+  display: flex;
+  text-align: center;
+  margin-right: 20px;
+}
+
+
+textarea {
+  display: flex;
+  width: 100%;
+  resize: none;
+  height: 73%;
+}
+
+#text-block {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+
+.add-report {
+  border: none;
+  color: black;
+  float: right;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+.add-report:hover {
+  background-color: rgba(243, 242, 242, 0.862);
+}
+
+.add-report:active {
+  background-color:  rgb(180, 188, 185);
+}
+
+.sent-report {
+  border: none;
+  color: black;
+  float: right;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+.sent-report:hover {
+  background-color: rgba(243, 242, 242, 0.862);
+}
+
+.sent-report:active {
+  background-color:  rgb(180, 188, 185);
+}
+
+/**
+  Спрячем сам флажок. Его установка и снятие будут происходить с помощью элемента подписи.
+*/
+
+/* input[type=checkbox]{
+  display: none;
+} */
+
+/* dropdawn menu */
+
+
+.dropdawn {
+  margin-right: 20px;
+};
+.dropdawn ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dropdawn ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.dropdawn a {
+  text-decoration: none;
+  display: block;
+  transition: .3s linear;
+}
+.topmenu > li {
+  float: left;
+  position: relative;
+  border-left: 1px solid black;
+}
+.topmenu > li:first-child {border-left: 0;}
+.topmenu > li > a {  
+  padding: 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.active_dropdawn {
+  border: 1px solid black;
+}
+.topmenu > li > a.active, 
+/* .submenu a:hover 
+{color: black;
+  background-color: rgba(243, 242, 242, 0.862) 
+} */
+.submenu li:hover 
+{color: black;
+  background-color: rgba(243, 242, 242, 0.862) 
+}
+.topmenu .fa, 
+.submenu .fa {
+  margin-left: 5px;
+  color: inherit;
+}
+.submenu {
+  position: absolute;
+  z-index: 5;
+  min-width: 200px;
+  background: white;
+  border-top: 1px solid #CBCBCC;
+  border-left: 1px solid #CBCBCC;
+  border-right: 1px solid #CBCBCC;
+  visibility: hidden;
+  opacity: 0; 
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+  transition: .3s linear;  
+}
+.submenu li 
+{position: relative;
+  color: #282828;
+  padding: 5px 10px;
+  font-size: 13px;
+  border-bottom: 1px solid #CBCBCC;
+}
+.submenu li a {
+  color: #282828;
+  font-size: 13px;
+  
+}
+.submenu .submenu {
+  position: absolute;
+  left: 100%;
+  top: -1px;
+  transition: .3s linear;
+}
+.dropdawn li:hover > .submenu {
+  transform: rotateX(0deg);
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+/* Блок 2 - статистика по ошибкам и гистограмма*/
+
+.content-rightside_block2 {
+  display: flex;
+  position: absolute;
+  left: 18%;
+  flex-direction: column;
+  width: 82%;
+  padding: 20px 40px 20px 40px;
+}
+
+.content-rightside_block2_checkbox-block {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.content-rightside_block2_checkbox-block h3 {
+  margin-bottom: 15px;
+}
+
+.subtitle_checkboxs_equipment {
+  display: block;
+  text-align: left;
+}
+
+/* Старый ЦГП */
+.checkbox_equipment_krans {
+  /* display: grid;
+  grid-template-columns: 1ft 6ft; */
+
+}
+
+.checkbox_equipment_OLD_CGP {
+  display: flex;
+}
+
+.checkbox_equipment_old-transport-gallerys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 140px;
+  margin-left: 10px;
+}
+
+
+.checkbox_equipment_old-Rotomatic-wrappers {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.checkbox_equipment_old-ID-points {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.checkbox_equipment_old-gravitation-cart {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.checkbox_equipment_old-half-automatic_wrappers {
+  display: flex;
+  flex-direction: column;
+  width: 135px;
+  margin-left: 10px;
+}
+
+.checkbox_equipment_old-gateways {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+/* Новый ЦГП */
+
+.checkbox_equipment_NEW_CGP {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 2fr 2fr;
+}
+
+/* ---------------------------------------- */
+
+
+.content-rightside_block3 {
+  display: none;
+  flex-direction: column;
+  padding: 20px 40px 20px 40px;
+  border-left: 1px solid rgb(196, 194, 194);
+}
+
+.content-rightside_block4 {
+  display: none;
+  flex-direction: column;
+  padding: 20px 40px 20px 40px;
+  border-left: 1px solid rgb(196, 194, 194);
+}
+
+.content-rightside_block5 {
+  display: none;
+  flex-direction: column;
+  padding: 20px 40px 20px 40px;
+  border-left: 1px solid rgb(196, 194, 194);
+}
+
+/* стиль неактивного блока */
+
+.unactive_block {
+  display: none;
+}

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Сменный журнал</title>
+    </head>
+
+    <body>
+        <main>
+            <div class="leftside-menu">
+                <div class="leftside-menu-blockbuttons">
+                    <div class="statisctic leftside-menu-button">
+                        <h3>Отчёты об ошибках и авариях оборудования</h3>
+                    </div>
+                    <div class="reports leftside-menu-button active">
+                        <h3>Статистика</h3>
+                    </div>
+                    <div class="leftside-menu-button">
+                        <h3>Блок меню 3</h3>
+                    </div>
+                    <div class="leftside-menu-button">
+                        <h3>Блок меню 4</h3>
+                    </div>
+                    <div class="leftside-menu-button">
+                        <h3>Блок меню 5</h3>
+                    </div>
+                    <div class="leftside-menu-button">
+                        <h3>Блок меню 6</h3>
+                    </div>
+                </div>
+                <div class="authorisation-menu-block">
+                    <input class="authorisation-login" type="text" placeholder="Имя пользователя">
+                    <input class="authorisation-password" type='password' placeholder="Пароль">
+                    <div class="authorisation-checkbox-block">
+                        <input class='authorisation-checkbox' type="checkbox">
+                        <span>Запомнить пользователя</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-rightside_block1 unactive_block">
+                
+                <button class="new-record"></button>
+                <div id="modal_window_new-record">
+                    <div class="modal_content">
+                        <div class="header-modal">
+                            <div class="title-modal">
+                                <h3 class="new-record_title">Новая запись</h3>
+                            </div>
+                            <div class="block-button_close">
+                                <button role="button" class="close_modal"></button>
+                            </div>
+                        </div>
+                        <div class="inputs_windows">
+                                <div class="dropdawn">
+                                    <ul class="topmenu">
+                                        <li><a class="active_dropdawn">Выберете Оборудование<span class="fa fa-angle-down"></span></a>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <a >Оборудование ЦГП &#8594;<span class="fa fa-angle-down"></span></a>
+                                                        <ul class="submenu">
+                                                            <li>
+                                                                <a >Краны &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                <ul class="submenu">
+                                                                    <li>
+                                                                        <a >Старые &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                        <ul class="submenu">
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Кран №1">
+                                                                                <label for="equipment_checkbox">Кран №1</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Кран №2">
+                                                                                <label for="equipment_checkbox">Кран №2</label>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Кран №3">
+                                                                                <label for="equipment_checkbox">Кран №3</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Кран №4">
+                                                                                <label for="equipment_checkbox">Кран №4</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a >Новые &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                        <ul class="submenu">
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Кран №11">
+                                                                                <label for="equipment_checkbox">Кран №11</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Кран №12">
+                                                                                <label for="equipment_checkbox">Кран №12</label>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Кран №13">
+                                                                                <label for="equipment_checkbox">Кран №13</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Кран №14">
+                                                                                <label for="equipment_checkbox">Кран №14</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <a>Транспортная галлерея &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                <ul class="submenu">
+                                                                    <li>
+                                                                        <a>Старый склад &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                        <ul class="submenu">
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Транспортная галлерея 1-ый этаж">
+                                                                                <label for="equipment_checkbox">1-ый этаж</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Транспортная галлерея 2-ой этаж">
+                                                                                <label for="equipment_checkbox">2-ой этаж</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a>Новый склад &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                        <ul class="submenu">
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name=name="Транспортная галлерея 1-ый этаж">
+                                                                                <label for="equipment_checkbox">1-ый этаж</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Транспортная галлерея 2-ой этаж">
+                                                                                <label for="equipment_checkbox">2-ой этаж</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <a>Обмотчики &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                <ul class="submenu">
+                                                                    <li>
+                                                                        <a href="">Старый склад &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                        <ul class="submenu">
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Ротоматик (длинный)">
+                                                                                <label for="equipment_checkbox">Ротоматик (длинный)</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Ротоматик (короткий)">
+                                                                                <label for="equipment_checkbox">Ротоматик (короткий)</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Siat 1">
+                                                                                <label for="equipment_checkbox">Siat 1</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Siat 2">
+                                                                                <label for="equipment_checkbox">Siat 2</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Siat 3">
+                                                                                <label for="equipment_checkbox">Siat 3</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Siat 4">
+                                                                                <label for="equipment_checkbox">Siat 4</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="">Новый склад &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                        <ul class="submenu">
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Октопус">
+                                                                                <label for="equipment_checkbox">Октопус</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Siat 5">
+                                                                                <label for="equipment_checkbox">Siat 5</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <a>Шлюзы &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                <ul class="submenu">
+                                                                    <li>
+                                                                        <a>Старый завод &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                        <ul class="submenu">
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№1">
+                                                                                <label for="equipment_checkbox">Шлюз №1</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№2">
+                                                                                <label for="equipment_checkbox">Шлюз №2</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№3">
+                                                                                <label for="equipment_checkbox">Шлюз №3</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№4">
+                                                                                <label for="equipment_checkbox">Шлюз №4</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№5">
+                                                                                <label for="equipment_checkbox">Шлюз №5</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№6">
+                                                                                <label for="equipment_checkbox">Шлюз №6</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№7">
+                                                                                <label for="equipment_checkbox">Шлюз №7</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№8">
+                                                                                <label for="equipment_checkbox">Шлюз №8</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№9">
+                                                                                <label for="equipment_checkbox">Шлюз №9</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№10">
+                                                                                <label for="equipment_checkbox">Шлюз №10</label>
+                                                                            </li>
+                                                                            
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a>Новый склад &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                        <ul class="submenu">
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№11">
+                                                                                <label for="equipment_checkbox">Шлюз №11</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№12">
+                                                                                <label for="equipment_checkbox">Шлюз №12</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№13">
+                                                                                <label for="equipment_checkbox">Шлюз №13</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№14">
+                                                                                <label for="equipment_checkbox">Шлюз №14</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№15">
+                                                                                <label for="equipment_checkbox">Шлюз №15</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№16">
+                                                                                <label for="equipment_checkbox">Шлюз №16</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="Шлюз№17">
+                                                                                <label for="equipment_checkbox">Шлюз №17</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li>
+                                                                <a>ID точки &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                <ul class="submenu">
+                                                                    <li>
+                                                                        <a>Старый склад &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                        <ul class="submenu">
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="ID точка E2">
+                                                                                <label for="equipment_checkbox">ID точка E2</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a>Новый склад &#8594;<span class="fa fa-angle-down"></span></a>
+                                                                        <ul class="submenu">
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="ID точка E2">
+                                                                                <label for="equipment_checkbox">ID точка E3</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="ID точка E4">
+                                                                                <label for="equipment_checkbox">ID точка E4</label>
+                                                                            </li>
+                                                                            <li>
+                                                                                <input class='equipment-checkbox' type="checkbox" name="ID точка E5">
+                                                                                <label for="equipment_checkbox">ID точка E5</label>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                            
+                                            <li><a>Оборудование ЦОП &#8594;<span class="fa fa-angle-down"></span></a>
+                                                <ul class="submenu">
+                                                    <li>
+                                                        <input class='equipment-checkbox' type="checkbox" name="Кран №1">
+                                                        <label for="equipment_checkbox">Кран №1</label>
+                                                    </li>
+                                                    <li>
+                                                        <input class='equipment-checkbox' type="checkbox" name="Кран №2">
+                                                        <label for="equipment_checkbox">Кран №2</label>
+                                                    <li>
+                                                        <input class='equipment-checkbox' type="checkbox" name="Кран №3">
+                                                        <label for="equipment_checkbox">Кран №3</label>
+                                                    </li>
+                                                    <li>
+                                                        <input class='equipment-checkbox' type="checkbox" name="Кран №4">
+                                                        <label for="equipment_checkbox">Кран №4</label>
+                                                    </li>
+                                                    <li>
+                                                        <input class='equipment-checkbox' type="checkbox" name="Кран №11">
+                                                        <label for="equipment_checkbox">Кран №11</label>
+                                                    </li>
+                                                    <li>
+                                                        <input class='equipment-checkbox' type="checkbox" name="Кран №12">
+                                                        <label for="equipment_checkbox">Кран №12</label>
+                                                    <li>
+                                                        <input class='equipment-checkbox' type="checkbox" name="Кран №13">
+                                                        <label for="equipment_checkbox">Кран №13</label>
+                                                    </li>
+                                                    <li>
+                                                        <input class='equipment-checkbox' type="checkbox" name="Кран №14">
+                                                        <label for="equipment_checkbox">Кран №14</label>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            </li>
+                                          </ul>
+                                        </li>
+                                      </ul>
+                                  </nav>
+                                </div>
+                                <div class="forms_windows">
+                                    <div class="modal-form">
+                                        <form action="">
+                                            <div class="text-block" id="text-block">Сущность обнаруженных неполадок</div>
+                                            <textarea class="about_problem" placeholder="Напишите текст..." rows="5"></textarea>
+                                        </form>
+                                    </div>
+                                    <div class="modal-form">
+                                        <form action="">
+                                            <div class="text-block" id="text-block">Каким путём устранена неисправность</div>
+                                            <textarea class="repair_problem" placeholder="Напишите текст..." rows="5"></textarea>
+                                        </form>
+                                    </div>
+                                    <div class="modal-form">
+                                        <form action="">
+                                            <div class="text-block" id="text-block">Какие работы необходимо провести</div>
+                                            <textarea class="recomendation" placeholder="Напишите текст..." rows="5"></textarea>
+                                        </form>
+                                    </div> 
+                                </div>   
+                        </div>
+                        <div class="block-sent-buttonsAndcounts">
+                            <div class="counts-reports">
+                                <span>4</span>
+                                <p class="title-reports">доваленных записей</p>
+                            </div>
+                            <div class="buttons-sent-block">
+                                <button role="button" class="add-report" value="submit"> Добавить</button>
+                                <button role="button" class="sent-report" value="submit">Отправить</button>
+                            </div>
+                            
+                        </div>                 
+                    </div> 
+                </div>
+            </div>
+            <div class="content-rightside_block2">
+                <h3 class="content-rightside_title">Статистика по ошибкам оборудования</h3>
+                <div class="content-rightside_block2_checkbox-block">
+                    <h3 class="subtitle_checkboxs_equipment">Оборудование ЦГП (старая часть)</h3>
+                    <div class="checkbox_equipment_OLD_CGP">
+                        <div class="checkbox_equipment_old-krans">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Кран №1">
+                                <label for="equipment_checkbox">Кран №1</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Кран №2">
+                                <label for="equipment_checkbox">Кран №2</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Кран №3">
+                                <label for="equipment_checkbox">Кран №3</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Кран №4">
+                                <label for="equipment_checkbox">Кран №4</label>
+                            </div>
+                        </div>
+                        <div class="checkbox_equipment_old-transport-gallerys">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Транспортная галлерея 1-ый этаж">
+                                <label for="equipment_checkbox">Транспортная галлерея 1-ый этаж</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Транспортная галлерея 2-ой этаж">
+                                <label for="equipment_checkbox">Транспортная галлерея 2-ой этаж</label>
+                            </div>
+                        </div>
+                        <div class="checkbox_equipment_old-Rotomatic-wrappers">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Rotomatic (длинный)">
+                                <label for="equipment_checkbox">Rotomatic (длинный)</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Rotomatic (короткий)">
+                                <label for="equipment_checkbox">Rotomatic (короткий)</label>
+                            </div>
+                        </div>
+                        <div class="checkbox_equipment_old-ID-points">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Точка ID1">
+                                <label for="equipment_checkbox">Точка ID1</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Точка ID2">
+                                <label for="equipment_checkbox">Точка ID2</label>
+                            </div>
+                        </div>
+                        <div class="checkbox_equipment_old-gravitation-cart">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Тележка гравитации">
+                                <label for="equipment_checkbox">Тележка гравитации</label>
+                            </div>
+                        </div>
+                        <div class="checkbox_equipment_old-half-automatic_wrappers">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Обмотчик Siat 1">
+                                <label for="equipment_checkbox">Обмотчик Siat 1</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Обмотчик Siat 2">
+                                <label for="equipment_checkbox">Обмотчик Siat 2</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Обмотчик Siat 3">
+                                <label for="equipment_checkbox">Обмотчик Siat 3</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Обмотчик Siat 4">
+                                <label for="equipment_checkbox">Обмотчик Siat 4</label>
+                            </div>
+                        </div>
+                        <div class="checkbox_equipment_old-gateways">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №1">
+                                <label for="equipment_checkbox">Шлюз №1</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №2">
+                                <label for="equipment_checkbox">Шлюз №2</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №3">
+                                <label for="equipment_checkbox">Шлюз №3</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №4">
+                                <label for="equipment_checkbox">Шлюз №4</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №5">
+                                <label for="equipment_checkbox">Шлюз №5</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №6">
+                                <label for="equipment_checkbox">Шлюз №6</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №7">
+                                <label for="equipment_checkbox">Шлюз №7</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №8">
+                                <label for="equipment_checkbox">Шлюз №8</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №9">
+                                <label for="equipment_checkbox">Шлюз №9</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №10">
+                                <label for="equipment_checkbox">Шлюз №10</label>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="subtitle_checkboxs_equipment">Оборудование ЦГП (новая часть)</h3>
+                    <div class="checkbox_equipment_NEW_CGP">
+                        <div class="checkbox_equipment_new-krans">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Кран №11">
+                                <label for="equipment_checkbox">Кран №11</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Кран №12">
+                                <label for="equipment_checkbox">Кран №12</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Кран №13">
+                                <label for="equipment_checkbox">Кран №13</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Кран №14">
+                                <label for="equipment_checkbox">Кран №14</label>
+                            </div> 
+                        </div>
+                        <div class="checkbox_equipment_new-transport-gallerys">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Транспортная галлерея 1-ый этаж">
+                                <label for="equipment_checkbox">Транспортная галлерея 1-ый этаж</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Транспортная галлерея 2-ой этаж">
+                                <label for="equipment_checkbox">Транспортная галлерея 2-ой этаж</label>
+                            </div>
+                        </div>
+                        <div class="checkbox_equipment_new-Rotomatic-wrappers">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Octopus">
+                                <label for="equipment_checkbox">Octopus</label>
+                            </div>
+                        </div>
+                        <div class="checkbox_equipment_new-ID-points">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Точка ID3">
+                                <label for="equipment_checkbox">Точка ID3</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Точка ID4">
+                                <label for="equipment_checkbox">Точка ID4</label>
+                            </div>
+                        </div>
+                        <div class="checkbox_equipment_new-gravitation-cart">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Тележка гравитации">
+                                <label for="equipment_checkbox">Тележка гравитации</label>
+                            </div>
+                        </div>
+                        <div class="checkbox_equipment_new-gateways">
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №1">
+                                <label for="equipment_checkbox">Шлюз №11</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №2">
+                                <label for="equipment_checkbox">Шлюз №12</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №3">
+                                <label for="equipment_checkbox">Шлюз №13</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №4">
+                                <label for="equipment_checkbox">Шлюз №14</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №5">
+                                <label for="equipment_checkbox">Шлюз №15</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №6">
+                                <label for="equipment_checkbox">Шлюз №16</label>
+                            </div>
+                            <div class="checkbox_equipment">
+                                <input class='equipment-checkbox' type="checkbox" name="Шлюз №7">
+                                <label for="equipment_checkbox">Шлюз №17</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-rightside_block3">
+                    <h3 class="content-rightside_title">Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum, ullam quia tempora ab quae cum!
+                        Velit, soluta in aliquam totam qui quas quis ullam amet consectetur alias vel exercitationem
+                        voluptate accusamus, ea doloribus quidem debitis at! Eius necessitatibus ut eaque iure assumenda cum
+                        sint id, odio cumque nostrum omnis corrupti ipsam voluptatem ipsa perspiciatis rerum laborum
+                        repellat soluta debitis?</p>
+                </div>
+                <div class="content-rightside_block4">
+                    <h3 class="content-rightside_title">Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum, ullam quia tempora ab quae cum!
+                        Velit, soluta in aliquam totam qui quas quis ullam amet consectetur alias vel exercitationem
+                        voluptate accusamus, ea doloribus quidem debitis at! Eius necessitatibus ut eaque iure assumenda cum
+                        sint id, odio cumque nostrum omnis corrupti ipsam voluptatem ipsa perspiciatis rerum laborum
+                        repellat soluta debitis?</p>
+                </div>
+                <div class="content-rightside_block5">
+                    <h3 class="content-rightside_title">Lorem ipsum dolor sit.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam harum, ullam quia tempora ab quae cum!
+                        Velit, soluta in aliquam totam qui quas quis ullam amet consectetur alias vel exercitationem
+                        voluptate accusamus, ea doloribus quidem debitis at! Eius necessitatibus ut eaque iure assumenda cum
+                        sint id, odio cumque nostrum omnis corrupti ipsam voluptatem ipsa perspiciatis rerum laborum
+                        repellat soluta debitis?</p>
+                </div>
+        </main>
+        <script src="./script/script.js"></script>
+    </body>
+
+</html>
